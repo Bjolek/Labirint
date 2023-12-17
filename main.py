@@ -36,6 +36,10 @@ while game:
         if event.type == pygame.QUIT:
             game = False
             pygame.quit()
+
+        if gold.hit_box.colliderect(pacman.hit_box):
+            money_sound.play()
+            gold.hit_box
     pacman.move()
     enemy.move()
     window.fill((0,153,0))
